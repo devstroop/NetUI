@@ -8,7 +8,7 @@ using NetUI.WinForms.Properties;
 
 namespace NetUI.WinForms
 {
-    public class UCTimeBar : UserControl
+    public sealed class UCTimeBar : UserControl
     {
         [Obsolete]
         public UCTimeBar()
@@ -148,7 +148,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000A2 RID: 162 RVA: 0x00003600 File Offset: 0x00001800
         private void DrawChannels(Graphics g)
         {
             if (g == null || this.Channels.Count == 0)
@@ -184,7 +183,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000A3 RID: 163 RVA: 0x00003948 File Offset: 0x00001B48
         private bool CalePosXForDraw(DateTime begin, DateTime end, out int posBegin, out int posEnd)
         {
             posBegin = (posEnd = 0);
@@ -297,7 +295,7 @@ namespace NetUI.WinForms
                             {
                                 if (this._option._showUpScale && this._option._showUpScaleValue)
                                 {
-                                    g.DrawString(dateTime.ToString("HH:mm"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 18), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime.ToString("HH:mm:ss"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 18), (float)(scalePosY - 15)));
                                 }
                                 if (this._option._showBottomScale)
                                 {
@@ -314,11 +312,11 @@ namespace NetUI.WinForms
                             {
                                 if (dateTime2.Hour == 0)
                                 {
-                                    g.DrawString(dateTime2.ToString("MM-dd"), this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 16), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime2.ToString("dd MMM yyyy"), this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 16), (float)(scalePosY - 15)));
                                 }
                                 else
                                 {
-                                    g.DrawString(dateTime2.Hour + "H", this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 9), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime2.ToString("h:mm tt"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 9), (float)(scalePosY - 15)));
                                 }
                             }
                             if (this._option._showBottomScale)
@@ -335,11 +333,11 @@ namespace NetUI.WinForms
                             {
                                 if (dateTime3.Day == 1)
                                 {
-                                    g.DrawString(dateTime3.ToString("yyyy-MM"), this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 22), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime3.ToString("MMM yyyy"), this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 22), (float)(scalePosY - 15)));
                                 }
                                 else
                                 {
-                                    g.DrawString(dateTime3.ToString("MM-dd"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 18), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime3.ToString("dd MMM"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 18), (float)(scalePosY - 15)));
                                 }
                             }
                             if (this._option._showBottomScale)
@@ -356,11 +354,11 @@ namespace NetUI.WinForms
                             {
                                 if (dateTime4.Month == 1)
                                 {
-                                    g.DrawString(dateTime4.Year.ToString() + "Year", this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 16), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime4.ToString("yyyy"), this._option._scalcFontBold, this._option._brushScalcString, new PointF((float)(scalePosX - 16), (float)(scalePosY - 15)));
                                 }
                                 else
                                 {
-                                    g.DrawString(dateTime4.Month.ToString() + "Month", this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 10), (float)(scalePosY - 15)));
+                                    g.DrawString(dateTime4.ToString("MMM"), this._option._scalcFont, this._option._brushScalcString, new PointF((float)(scalePosX - 10), (float)(scalePosY - 15)));
                                 }
                             }
                             if (this._option._showBottomScale)
@@ -726,9 +724,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x1700003E RID: 62
-        // (get) Token: 0x060000B9 RID: 185 RVA: 0x00004A51 File Offset: 0x00002C51
-        // (set) Token: 0x060000BA RID: 186 RVA: 0x00004A59 File Offset: 0x00002C59
         public string GUID
         {
             get
@@ -741,9 +736,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x1700003F RID: 63
-        // (get) Token: 0x060000BB RID: 187 RVA: 0x00004A62 File Offset: 0x00002C62
-        // (set) Token: 0x060000BC RID: 188 RVA: 0x00004A6A File Offset: 0x00002C6A
         public TimeBarModes Mode
         {
             get
@@ -761,9 +753,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000040 RID: 64
-        // (get) Token: 0x060000BD RID: 189 RVA: 0x00004A88 File Offset: 0x00002C88
-        // (set) Token: 0x060000BE RID: 190 RVA: 0x00004A90 File Offset: 0x00002C90
         [Obsolete]
         public TimeUnits TimeUnit
         {
@@ -788,10 +777,7 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000041 RID: 65
-        // (get) Token: 0x060000BF RID: 191 RVA: 0x00004AE0 File Offset: 0x00002CE0
-        // (set) Token: 0x060000C0 RID: 192 RVA: 0x00004AE8 File Offset: 0x00002CE8
-        [Obsolete("该属性已过期，不建议再使用。")]
+        [Obsolete("This property has expired and is no longer recommended for use.")]
         public DateTime DateTimeBegin
         {
             get
@@ -804,10 +790,7 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000042 RID: 66
-        // (get) Token: 0x060000C1 RID: 193 RVA: 0x00004AF1 File Offset: 0x00002CF1
-        // (set) Token: 0x060000C2 RID: 194 RVA: 0x00004AFE File Offset: 0x00002CFE
-        [Obsolete("该属性已过期，请使用SetPointerValue 和 GetPointerValue方法替代。")]
+        [Obsolete("This property has expired, please use the SetPointerValue and GetPointerValue methods instead.")]
         public DateTime CurrentTime
         {
             get
@@ -823,8 +806,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000043 RID: 67
-        // (get) Token: 0x060000C3 RID: 195 RVA: 0x00004B0F File Offset: 0x00002D0F
         public int CurrentTimeLinePos
         {
             get
@@ -833,9 +814,7 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000044 RID: 68
-        // (get) Token: 0x060000C4 RID: 196 RVA: 0x00004B1C File Offset: 0x00002D1C
-        // (set) Token: 0x060000C5 RID: 197 RVA: 0x00004B28 File Offset: 0x00002D28
+
         public DateTime DateTimeLeft
         {
             get
@@ -854,9 +833,7 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000045 RID: 69
-        // (get) Token: 0x060000C6 RID: 198 RVA: 0x00004B7D File Offset: 0x00002D7D
-        // (set) Token: 0x060000C7 RID: 199 RVA: 0x00004B85 File Offset: 0x00002D85
+
         public ProgressBarEx ProgressBar
         {
             get
@@ -868,9 +845,7 @@ namespace NetUI.WinForms
                 this._progressBar = value;
             }
         }
-
-        // Token: 0x17000046 RID: 70
-        // (get) Token: 0x060000C8 RID: 200 RVA: 0x00004B8E File Offset: 0x00002D8E
+        
         public TimeBarOptions Option
         {
             get
@@ -879,9 +854,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000047 RID: 71
-        // (get) Token: 0x060000C9 RID: 201 RVA: 0x00004B96 File Offset: 0x00002D96
-        // (set) Token: 0x060000CA RID: 202 RVA: 0x00004B9E File Offset: 0x00002D9E
         public bool Dragable
         {
             get
@@ -894,9 +866,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000048 RID: 72
-        // (get) Token: 0x060000CB RID: 203 RVA: 0x00004BA7 File Offset: 0x00002DA7
-        // (set) Token: 0x060000CC RID: 204 RVA: 0x00004BAF File Offset: 0x00002DAF
         public object UserData
         {
             get
@@ -909,9 +878,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x17000049 RID: 73
-        // (get) Token: 0x060000CD RID: 205 RVA: 0x00004BB8 File Offset: 0x00002DB8
-        // (set) Token: 0x060000CE RID: 206 RVA: 0x00004BC0 File Offset: 0x00002DC0
         public object UserData2
         {
             get
@@ -924,8 +890,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x1700004A RID: 74
-        // (get) Token: 0x060000CF RID: 207 RVA: 0x00004BC9 File Offset: 0x00002DC9
         public List<TimeSection> Sections
         {
             get
@@ -934,62 +898,17 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x1700004B RID: 75
-        // (get) Token: 0x060000D0 RID: 208 RVA: 0x00004BD1 File Offset: 0x00002DD1
-        // (set) Token: 0x060000D1 RID: 209 RVA: 0x00004BD9 File Offset: 0x00002DD9
         public List<Channel> Channels { get; private set; }
-
-        // Token: 0x14000003 RID: 3
-        // (add) Token: 0x060000D2 RID: 210 RVA: 0x00004BE4 File Offset: 0x00002DE4
-        // (remove) Token: 0x060000D3 RID: 211 RVA: 0x00004C1C File Offset: 0x00002E1C
         public event RoleEventHandler TimeLineDraging;
-
-        // Token: 0x14000004 RID: 4
-        // (add) Token: 0x060000D4 RID: 212 RVA: 0x00004C54 File Offset: 0x00002E54
-        // (remove) Token: 0x060000D5 RID: 213 RVA: 0x00004C8C File Offset: 0x00002E8C
         public event RoleEventHandler AfterTimeLineDraged;
-
-        // Token: 0x14000005 RID: 5
-        // (add) Token: 0x060000D6 RID: 214 RVA: 0x00004CC4 File Offset: 0x00002EC4
-        // (remove) Token: 0x060000D7 RID: 215 RVA: 0x00004CFC File Offset: 0x00002EFC
         public event RoleDragingEventHandler RoleDraging;
-
-        // Token: 0x14000006 RID: 6
-        // (add) Token: 0x060000D8 RID: 216 RVA: 0x00004D34 File Offset: 0x00002F34
-        // (remove) Token: 0x060000D9 RID: 217 RVA: 0x00004D6C File Offset: 0x00002F6C
         public event RoleEventHandler AfterRoleDraged;
-
-        // Token: 0x14000007 RID: 7
-        // (add) Token: 0x060000DA RID: 218 RVA: 0x00004DA4 File Offset: 0x00002FA4
-        // (remove) Token: 0x060000DB RID: 219 RVA: 0x00004DDC File Offset: 0x00002FDC
         public event RoleEventHandler MouseHoverEx;
-
-        // Token: 0x14000008 RID: 8
-        // (add) Token: 0x060000DC RID: 220 RVA: 0x00004E14 File Offset: 0x00003014
-        // (remove) Token: 0x060000DD RID: 221 RVA: 0x00004E4C File Offset: 0x0000304C
         public event RoleEventHandler DoubleClickEx;
-
-        // Token: 0x14000009 RID: 9
-        // (add) Token: 0x060000DE RID: 222 RVA: 0x00004E84 File Offset: 0x00003084
-        // (remove) Token: 0x060000DF RID: 223 RVA: 0x00004EBC File Offset: 0x000030BC
         public event RoleMouseEventHandler MouseClickEx;
-
-        // Token: 0x1400000A RID: 10
-        // (add) Token: 0x060000E0 RID: 224 RVA: 0x00004EF4 File Offset: 0x000030F4
-        // (remove) Token: 0x060000E1 RID: 225 RVA: 0x00004F2C File Offset: 0x0000312C
         public event RoleEventHandler MouseStayed;
-
-        // Token: 0x1400000B RID: 11
-        // (add) Token: 0x060000E2 RID: 226 RVA: 0x00004F64 File Offset: 0x00003164
-        // (remove) Token: 0x060000E3 RID: 227 RVA: 0x00004F9C File Offset: 0x0000319C
         public event TimeUnitChangedEventHandler TimeUnitChanged;
-
-        // Token: 0x1400000C RID: 12
-        // (add) Token: 0x060000E4 RID: 228 RVA: 0x00004FD4 File Offset: 0x000031D4
-        // (remove) Token: 0x060000E5 RID: 229 RVA: 0x0000500C File Offset: 0x0000320C
         public event RoleEventHandler CurrentTimeChanged;
-
-        // Token: 0x060000E6 RID: 230 RVA: 0x00005041 File Offset: 0x00003241
         public void AddChannel(Channel ch)
         {
             if (ch == null)
@@ -1000,7 +919,6 @@ namespace NetUI.WinForms
             this.RefreshBar();
         }
 
-        // Token: 0x060000E7 RID: 231 RVA: 0x00005059 File Offset: 0x00003259
         public void InsertChannel(Channel ch, int index)
         {
             if (ch != null && index >= 0 && index <= this.Channels.Count)
@@ -1010,7 +928,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000E8 RID: 232 RVA: 0x00005083 File Offset: 0x00003283
         public void RemoveChannel(Channel ch)
         {
             if (this.Channels.Contains(ch))
@@ -1020,7 +937,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000E9 RID: 233 RVA: 0x000050A6 File Offset: 0x000032A6
         public void RemoveChannel(int index)
         {
             if (index >= 0 && index < this.Channels.Count)
@@ -1030,7 +946,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000EA RID: 234 RVA: 0x000050CC File Offset: 0x000032CC
         public void RemoveChannel(string channelId)
         {
             Channel channel = this.Channels.Find((Channel c) => c.Id == channelId);
@@ -1041,14 +956,12 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000EB RID: 235 RVA: 0x00005114 File Offset: 0x00003314
         public void ClearChannels()
         {
             this.Channels.Clear();
             this.RefreshBar();
         }
 
-        // Token: 0x060000EC RID: 236 RVA: 0x00005128 File Offset: 0x00003328
         public bool AddSection(TimeSection sec, bool refresh = true)
         {
             if (sec.DateTimeBegin >= sec.DateTimeEnd)
@@ -1067,7 +980,6 @@ namespace NetUI.WinForms
             return true;
         }
 
-        // Token: 0x060000ED RID: 237 RVA: 0x00005179 File Offset: 0x00003379
         public void AddSection(TimeSection sec, Channel ch)
         {
             if (ch != null)
@@ -1078,7 +990,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000EE RID: 238 RVA: 0x00005198 File Offset: 0x00003398
         public void AddSection(TimeSection sec, string chId)
         {
             Channel channel = this.Channels.Find((Channel c) => c.Id == chId);
@@ -1090,7 +1001,6 @@ namespace NetUI.WinForms
             }
         }
 
-        // Token: 0x060000EF RID: 239 RVA: 0x000051E8 File Offset: 0x000033E8
         public void AddSection(TimeSection sec, int channelIndex)
         {
             if (channelIndex >= 0 && channelIndex <= this.Channels.Count - 1)
@@ -1229,7 +1139,6 @@ namespace NetUI.WinForms
             return list;
         }
 
-        // Token: 0x060000F9 RID: 249 RVA: 0x00005604 File Offset: 0x00003804
         public TimeSection GetSection(string guid)
         {
             Predicate<TimeSection> temp = null;
@@ -1271,7 +1180,6 @@ namespace NetUI.WinForms
             return list;
         }
 
-        // Token: 0x060000FB RID: 251 RVA: 0x00005730 File Offset: 0x00003930
         public List<TimeSection> GetAllSections()
         {
             List<TimeSection> list = new List<TimeSection>();
@@ -1285,23 +1193,18 @@ namespace NetUI.WinForms
             return list;
         }
 
-        // Token: 0x060000FC RID: 252 RVA: 0x0000578A File Offset: 0x0000398A
-        [Obsolete("该方法已弃用，且没有替代方法，用户可根据现有接口自行实现该方法的功能。")]
+        [Obsolete("This method has been deprecated and there is no alternative. Users can implement the function of this method by themselves based on the existing interface.")]
         public void MoveToSection()
         {
         }
-
-        // Token: 0x060000FD RID: 253 RVA: 0x0000578C File Offset: 0x0000398C
-        [Obsolete("该方法已过期，请使用SetPointerPos方法替代。")]
+        [Obsolete("This method has been expired, please use SetPointerPos method instead.")]
         public void MoveTimeLineTo(DateTime dt)
         {
             this._curTimeLine.X = this.DateTimeToPos(dt);
             this._curTimeLine.DateTime = dt;
             this.RefreshBar();
         }
-
-        // Token: 0x060000FE RID: 254 RVA: 0x000057B4 File Offset: 0x000039B4
-        [Obsolete("该方法已过期，请使用SetPointerPos方法替代。")]
+        [Obsolete("This method has been expired, please use SetPointerPos method instead.")]
         public void MoveTimeLineTo(int posX)
         {
             if (posX < 10)
@@ -1316,8 +1219,6 @@ namespace NetUI.WinForms
             this._curTimeLine.DateTime = this.PosToDateTime(posX);
             this.RefreshBar();
         }
-
-        // Token: 0x060000FF RID: 255 RVA: 0x00005808 File Offset: 0x00003A08
         public void SetPointerPos(int posX)
         {
             if (this.Mode != TimeBarModes.Time)
@@ -1340,8 +1241,6 @@ namespace NetUI.WinForms
             this._curTimeLine.DateTime = this.PosToDateTime(posX);
             this.RefreshBar();
         }
-
-        // Token: 0x06000100 RID: 256 RVA: 0x0000586B File Offset: 0x00003A6B
         public void SetPointerPos(DateTime dt)
         {
             if (this.Mode != TimeBarModes.Time)
@@ -1356,8 +1255,6 @@ namespace NetUI.WinForms
             this._curTimeLine.DateTime = dt;
             this.RefreshBar();
         }
-
-        // Token: 0x06000101 RID: 257 RVA: 0x000058A3 File Offset: 0x00003AA3
         public void SetPointerValue(DateTime dt)
         {
             if (this.Mode != TimeBarModes.Time)
@@ -1369,14 +1266,10 @@ namespace NetUI.WinForms
                 this.SetCurrentTimeValue(dt);
             }
         }
-
-        // Token: 0x06000102 RID: 258 RVA: 0x00004AF1 File Offset: 0x00002CF1
         public DateTime GetPointerValue()
         {
             return this._curTimeLine.DateTime;
         }
-
-        // Token: 0x06000103 RID: 259 RVA: 0x000058C0 File Offset: 0x00003AC0
         public void SetPointerRangMarker(bool enable, double secondsLeft = 0.0, double secondsRight = 0.0)
         {
             if (!enable)
@@ -1393,8 +1286,6 @@ namespace NetUI.WinForms
                 DateTimeEnd = this.GetPointerValue().AddSeconds(secondsRight)
             };
         }
-
-        // Token: 0x06000104 RID: 260 RVA: 0x00005935 File Offset: 0x00003B35
         protected override void Dispose(bool disposing)
         {
             if (disposing && this.components != null)
@@ -1403,8 +1294,6 @@ namespace NetUI.WinForms
             }
             base.Dispose(disposing);
         }
-
-        // Token: 0x06000105 RID: 261 RVA: 0x00005954 File Offset: 0x00003B54
         private void InitializeComponent()
         {
             base.SuspendLayout();
@@ -1424,109 +1313,62 @@ namespace NetUI.WinForms
             base.ResumeLayout(false);
         }
 
-        // Token: 0x04000054 RID: 84
+
         private TimeSection _sectionNearPointer;
-
-        // Token: 0x04000055 RID: 85
         private double _secondsLeftOfPointerRange;
-
-        // Token: 0x04000056 RID: 86
         private double _secondsRightOfPointerRange;
-
-        // Token: 0x04000057 RID: 87
         private string _guid = "";
-
-        // Token: 0x04000058 RID: 88
         private Cursor _cursorDrag;
-
-        // Token: 0x04000059 RID: 89
         private Cursor _cursorPressed;
-
-        // Token: 0x0400005A RID: 90
         private TimeBarOptions _option;
-
-        // Token: 0x0400005B RID: 91
         private Timer _timerForMouseStayDelay;
-
-        // Token: 0x0400005C RID: 92
         private ProgressBarEx _progressBar;
-
-        // Token: 0x0400005D RID: 93
         private TimeBarModes _mode;
-
-        // Token: 0x0400005E RID: 94
         private int _mousePositionX = -100;
-
-        // Token: 0x0400005F RID: 95
         private int _lastDragStartX;
-
-        // Token: 0x04000060 RID: 96
         private TimeLine _curTimeLine = new TimeLine
         {
             X = 300
         };
-
-        // Token: 0x04000061 RID: 97
         private TimeLine _mouseTimeLine = new TimeLine
         {
             X = -1000
         };
-
-        // Token: 0x04000062 RID: 98
         private int _spaceLeft;
-
-        // Token: 0x04000063 RID: 99
         private int _space = 60;
 
-        // Token: 0x04000064 RID: 100
         private double _secondsPerPix;
 
-        // Token: 0x04000065 RID: 101
         private static readonly DateTime DateTimeOrigin = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd 00:00:00"));
 
-        // Token: 0x04000066 RID: 102
         private int _originPos;
 
-        // Token: 0x04000067 RID: 103
         private DateTime _dateTimeBegin = DateTime.Now;
 
-        // Token: 0x04000068 RID: 104
         private TimeUnits _timeUnit;
 
-        // Token: 0x04000069 RID: 105
         private int _curSectionIndex;
 
-        // Token: 0x0400006A RID: 106
         private bool _isRoleDraging;
 
-        // Token: 0x0400006B RID: 107
         private bool _isCurrentTimeLineDraging;
 
-        // Token: 0x0400006C RID: 108
         private const int _mouseStayDelayMS = 1500;
 
-        // Token: 0x0400006D RID: 109
         private int _mouseStayDelayCount;
 
-        // Token: 0x0400006E RID: 110
         private bool _dragable = true;
 
-        // Token: 0x0400006F RID: 111
         private object _userData;
 
-        // Token: 0x04000070 RID: 112
         private object _userData2;
 
-        // Token: 0x04000071 RID: 113
         private int _mouseLastPosX;
 
-        // Token: 0x04000072 RID: 114
         private int _sectionSpace = 3;
 
-        // Token: 0x04000073 RID: 115
         private int _rolePadding = 4;
 
-        // Token: 0x0400007F RID: 127
         private IContainer components;
     }
 }
