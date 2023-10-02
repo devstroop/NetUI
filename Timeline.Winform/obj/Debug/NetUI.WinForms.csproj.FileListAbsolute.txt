@@ -1,0 +1,8 @@
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\bin\Debug\NetUI.WinForms.dll
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\bin\Debug\NetUI.WinForms.pdb
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.csproj.AssemblyReference.cache
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.Properties.Resources.resources
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.csproj.GenerateResource.cache
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.dll
+C:\Users\aksbj\Documents\GitHub\Timeline.Winform\Timeline.Winform\obj\Debug\NetUI.WinForms.pdb

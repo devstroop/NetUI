@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timeline.Winform", "Timeline.Winform\Timeline.Winform.csproj", "{DC26AD9A-F4D6-4704-933C-3209B8680E92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetUI.WinForms", "Timeline.Winform\NetUI.WinForms.csproj", "{DC26AD9A-F4D6-4704-933C-3209B8680E92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E72CD57-84D6-4C5B-9F21-ED6D0688BF77}
 	EndGlobalSection
 EndGlobal
