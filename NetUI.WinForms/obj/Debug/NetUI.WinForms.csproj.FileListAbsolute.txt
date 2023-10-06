@@ -14,3 +14,11 @@ C:\Users\aksbj\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.cs
 C:\Users\aksbj\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.csproj.CoreCompileInputs.cache
 C:\Users\aksbj\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.dll
 C:\Users\aksbj\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.pdb
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\bin\Debug\NetUI.WinForms.dll
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\bin\Debug\NetUI.WinForms.pdb
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.csproj.AssemblyReference.cache
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.Properties.Resources.resources
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.csproj.GenerateResource.cache
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.dll
+C:\Users\aksbj\OneDrive\Documents\GitHub\NetUI\NetUI.WinForms\obj\Debug\NetUI.WinForms.pdb
